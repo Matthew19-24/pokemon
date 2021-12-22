@@ -1,0 +1,124 @@
+import random
+
+class Pokemon:
+    def __init__(self):
+        self.LVL = level
+        self.OWNER = owner
+        
+    def STATS(self):
+        print(f"Species: {type(self).__name__}\n" +
+        f"Owner: {self.OWNER}\n" +
+        f"Type: {self.TYPE}\n" +
+        f"Level: {self.LVL}\n" +
+        f"HP: {self.HP}\n" +
+        f"Attack: {self.ATK}\n" +
+        f"Deffense: {self.DEF}\n" +
+        f"Special Attack: {self.SPC}\n" +
+        f"Special Deffense: {self.SPD}\n\n")
+
+class Bulbasaur(Pokemon):
+    def __init__(self, level, owner):
+        self.TYPE = "Grass"
+        self.OWNER = owner
+        self.LVL = level
+        self.HP = random.randrange(19,21)
+        self.ATK = random.randrange(9,12)
+        self.DEF = random.randrange(9,12)
+        self.SPC = random.randrange(11,14)
+        self.SPD = random.randrange(11,14)
+    
+
+class Charmander(Pokemon):
+    def __init__(self, level, owner):
+        self.TYPE = "Fire"
+        self.OWNER = owner
+        self.LVL = level
+        self.HP = random.randrange(18,21)
+        self.ATK = random.randrange(10,12)
+        self.DEF = random.randrange(9,11)
+        self.SPC = random.randrange(10,12)
+        self.SPD = random.randrange(8,10)
+
+class Squirtle(Pokemon):
+    def __init__(self, level, owner):
+        self.TYPE = "Water"
+        self.OWNER = owner
+        self.LVL = level
+        self.HP = random.randrange(19,21)
+        self.ATK = random.randrange(9,12)
+        self.DEF = random.randrange(11,14)
+        self.SPC = random.randrange(10,12)
+        self.SPD = random.randrange(9,11)
+
+
+
+#Declare Variables
+user_name = 0
+rival_name = 0
+
+
+
+#Get user_name
+user_name = input("Oak:\tHello there!\n" +
+                  "\tWelcome to the world of POKéMON!\n" +
+                  "\tMy name is OAK!\n" +
+                  "\tPeople call me the POKéMON PROF!\n" +
+                  "\tThis world is inhabited by creatures called POKéMON!\n" +
+                  "\tFor some people, POKéMON are pets.\n" +
+                  "\tOthers use them for fights.\n" +
+                  "\tMyself...\n" +
+                  "\tI study POKéMON as a profession.\n" +
+                  "\tFirst, what is your name?\n\n")
+
+
+
+#Have user chose rivals name
+rival_name = input("\nOak:\tRight!\n" +
+                   f"\tSo your name is {user_name.upper()}!\n" +
+                   "\tThis is my grandson.\n" +
+                   "\tHe's been your rival since you were a baby.\n" +
+                   "\t...Erm, what is his name again?\n\n")
+
+
+
+#Dialog
+input("\n\nOak:\tThat's right!\n" +
+      f"\tHis name is {rival_name.upper()}!\n" +
+      f"\t{user_name.upper()}! Your very own POKéMON legend is about to unfold!\n" +
+      "\tA world of dreams and adventures with POKéMON awaits!\n" +
+      "\tLet's go!\n\n")
+
+input(f"\nOak:\tHere, {user_name.upper()}! There are 3 POKéMON here!\n" +
+                "\tHaha! They are inside the POKé BALLS.\n" +
+                "\tWhen I was young, I was a serious POKéMON trainer.\n" +
+                "\tIn my old age, I have only 3 let, but you can have one!\n" +
+                "\tChoose!\n\n")
+
+#Have user chose starter
+starter = input("Press [1] for Bulbasaur, the grass type,\n" +
+                "Press [2] for Squirtle, the water type,\n" +
+                "Press [3] for Charmander, the fire type.\n\n")
+
+while True:
+    if int(starter) == 1:
+        starter = Bulbasaur(5, user_name)
+        rival = Charmander(5, rival_name)
+        break
+    elif int(starter) == 2:
+        starter = Squirtle(5, user_name)
+        rival = Bulbasaur(5, rival_name)
+        break
+    elif int(starter) == 3:
+        starter = Charmander(5, user_name)
+        rival = Squirtle(5, rival_name)
+        break
+    else:
+        print("\nInvalid entry: Try again!\n")
+        starter = input()
+
+
+            
+#print("")
+#starter.STATS()
+#rival.STATS()
+
