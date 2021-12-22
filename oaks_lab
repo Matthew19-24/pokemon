@@ -3,7 +3,6 @@ import random
 class Pokemon:
     def __init__(self):
         self.LVL = level
-        self.OWNER = owner
         
     def STATS(self):
         print(f"Species: {type(self).__name__}\n" +
@@ -116,9 +115,7 @@ while True:
         print("\nInvalid entry: Try again!\n")
         starter = input()
 
-
             
 #print("")
 #starter.STATS()
 #rival.STATS()
-
