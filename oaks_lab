@@ -1,4 +1,5 @@
 import random
+from time import sleep
 
 class Pokemon:
     def __init__(self):
@@ -58,45 +59,46 @@ rival_name = 0
 
 
 #Get user_name
-user_name = input("Oak:\tHello there!\n" +
-                  "\tWelcome to the world of POKéMON!\n" +
-                  "\tMy name is OAK!\n" +
-                  "\tPeople call me the POKéMON PROF!\n" +
-                  "\tThis world is inhabited by creatures called POKéMON!\n" +
-                  "\tFor some people, POKéMON are pets.\n" +
-                  "\tOthers use them for fights.\n" +
-                  "\tMyself...\n" +
-                  "\tI study POKéMON as a profession.\n" +
-                  "\tFirst, what is your name?\n\n")
+print("Oak:\tHello there!"), sleep(1)
+print("\tWelcome to the world of POKéMON!"), sleep(1.7)
+print("\tMy name is OAK!"), sleep(1.3)
+print("\tPeople call me the POKéMON PROF!"), sleep(1.7)
+print("\tThis world is inhabited by creatures called POKéMON!"), sleep(2.2)
+print("\tFor some people, POKéMON are pets."), sleep(1.7)
+print("\tOthers use them for fights."), sleep(1.7)
+print("\tMyself..."), sleep(1)
+print("\tI study POKéMON as a profession."), sleep(1.7)
+print("\tFirst, what is your name?\n"), sleep (1)
+user_name = input("You:\t")
 
 
 
 #Have user chose rivals name
-rival_name = input("\nOak:\tRight!\n" +
-                   f"\tSo your name is {user_name.upper()}!\n" +
-                   "\tThis is my grandson.\n" +
-                   "\tHe's been your rival since you were a baby.\n" +
-                   "\t...Erm, what is his name again?\n\n")
+print("\nOak:\tRight!"), sleep(1)
+print(f"\tSo your name is {user_name.upper()}."), sleep(1.5)
+print("\tThis is my grandson."), sleep(1.5)
+print("\tHe's been your rival since you were a baby."), sleep(1.7)
+print("\t...Erm, what is his name again?\n"), sleep(1)
+rival_name = input("You:\t")
 
 
 
-#Dialog
-input("\n\nOak:\tThat's right!\n" +
-      f"\tHis name is {rival_name.upper()}!\n" +
-      f"\t{user_name.upper()}! Your very own POKéMON legend is about to unfold!\n" +
-      "\tA world of dreams and adventures with POKéMON awaits!\n" +
-      "\tLet's go!\n\n")
-
-input(f"\nOak:\tHere, {user_name.upper()}! There are 3 POKéMON here!\n" +
-                "\tHaha! They are inside the POKé BALLS.\n" +
-                "\tWhen I was young, I was a serious POKéMON trainer.\n" +
-                "\tIn my old age, I have only 3 let, but you can have one!\n" +
-                "\tChoose!\n\n")
-
-#Have user chose starter
-starter = input("Press [1] for Bulbasaur, the grass type,\n" +
+#Have user chose starer Pokémon
+print("\nOak:\tThat's right!"), sleep(1)
+print(f"\tHis name is {rival_name.upper()}!"), sleep(1.5)
+print(f"\t{user_name.upper()}! Your very own POKéMON legend is about to unfold!"), sleep(2)
+print("\tA world of dreams and adventures with POKéMON awaits!"), sleep(2)
+print("\tLet's go!"), sleep(1)
+print(f"\tHere, {user_name.upper()}! There are 3 POKéMON here!"), sleep(1.7)
+print("\tHaha! They are inside the POKéBALLS."), sleep(1.5)
+print("\tWhen I was young, I was a serious POKéMON trainer."), sleep(1.7)
+print("\tIn my old age, I have only 3 left, but you can have one!"), sleep(2)
+print("\tChoose!\n"), sleep(1)
+print("Press [1] for Bulbasaur, the grass type,\n" +
                 "Press [2] for Squirtle, the water type,\n" +
                 "Press [3] for Charmander, the fire type.\n\n")
+
+starter = input("You:\t")
 
 while True:
     if int(starter) == 1:
