@@ -160,9 +160,7 @@ class Bulbasaur(Pokemon):
         self.set_nature()
         self.LVL = level
         self.OWNER = owner
-        self.SPECIES = Bulbasaur
         self.TYPE = "Grass"
-    
         #BASE STATS
         self.BASE_HP = 45
         self.BASE_ATK = 49
@@ -170,11 +168,59 @@ class Bulbasaur(Pokemon):
         self.BASE_SP_ATK = 65
         self.BASE_SP_DEF = 65
         self.BASE_SPD = 45
-
         self.set_stats()
 
-bulb = Bulbasaur(5, "Matthew")
+class Charmander(Pokemon):
+    def __init__(self, level, owner):
+        self.set_IV()
+        self.set_EV()
+        self.set_nature()
+        self.LVL = level
+        self.OWNER = owner
+        self.TYPE = "Fire"
+        #BASE STATS
+        self.BASE_HP = 39
+        self.BASE_ATK = 52
+        self.BASE_DEF = 43
+        self.BASE_SP_ATK = 60
+        self.BASE_SP_DEF = 50
+        self.BASE_SPD = 65
+        self.set_stats()
 
-bulb.display_IV()
-bulb.display_EV()
-bulb.display_stats()
+class Squirtle(Pokemon):
+    def __init__(self, level, owner):
+        self.set_IV()
+        self.set_EV()
+        self.set_nature()
+        self.LVL = level
+        self.OWNER = owner
+        self.TYPE = "Water"
+        #BASE STATS
+        self.BASE_HP = 44
+        self.BASE_ATK = 48
+        self.BASE_DEF = 65
+        self.BASE_SP_ATK = 50
+        self.BASE_SP_DEF = 64
+        self.BASE_SPD = 43
+        self.set_stats()
+
+
+user_name = input()
+rival_name = input()
+starter = input()
+
+while True:
+    if int(starter) == 1:
+        starter = Bulbasaur(5, user_name)
+        rival = Charmander(5, rival_name)
+        break
+    elif int(starter) == 2:
+        starter = Squirtle(5, user_name)
+        rival = Bulbasaur(5, rival_name)
+        break
+    elif int(starter) == 3:
+        starter = Charmander(5, user_name)
+        rival = Squirtle(5, rival_name)
+
+starter.display_stats()
+rival.display_stats()
