@@ -1,50 +1,6 @@
 import random
 import math
 
-class Pokemon:
-    def __init__(self, level):
-        self.LVL = level
-        self.BASE_HP = 0
-        self.BASE_ATK = 0
-        self.BASE_DEF = 0
-        self.BASE_SP_ATK = 0
-        self.BASE_SP_DEF = 0
-        self.BASE_SPD = 0
-        self.OWNER = 0
-        self.SPECIES = 0
-        self.TYPE = 0
-
-
-    ##Randomize IV stats
-    def set_IV(self):
-        self.IV_HP = random.randrange(0,32)
-        self.IV_ATK = random.randrange(0,32)
-        self.IV_DEF = random.randrange(0,32)
-        self.IV_SPD = random.randrange(0,32)
-        self.IV_SP_ATK = random.randrange(0,32)
-        self.IV_SP_DEF = random.randrange(0,32)
-
-    ##Declaring blank EV variables
-    def set_EV(self):
-        self.EV_HP = 0
-        self.EV_ATK = 0
-        self.EV_DEF = 0
-        self.EV_SPD = 0
-        self.EV_SP_ATK = 0
-        self.EV_SP_DEF = 0
-
-    ##Set nature variables
-    def set_nature(self):
-        self.nature_atk = 1
-        self.nature_def = 1
-        self.nature_spd = 1
-        self.nature_sp_atk = 1
-        self.nature_sp_def = 1
-
-        #Randomize nature
-        self.nature_list = ["Adamant", "Bashful", "Brave", "Bold", "Calm", "Careful", "Docile", "Gentle", "Hardy", "Hasty", "Impish", "Jolly", "Lax", "Lonely", "Mild", "Modest", "Naive", "Naughty", "Quiet", "Quirky", "Rash", "Relaxed", "Sassy", "Serious", "Timid"]import random
-import math
-
 
 class Pokemon:
     def __init__(self, level):
