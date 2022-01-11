@@ -51,3 +51,41 @@ def id_card(poke):
     stats.pack()
 
     window.mainloop()
+
+
+def starter_pick():
+    window = tk.Tk()
+    window.title("Starter Pokémon")
+    window.geometry("480x280")
+
+    def close():
+        window.destroy()
+
+    starter_num = tk.IntVar()
+
+    frame1 = tk.Frame()
+    img1 = tk.PhotoImage(file="poke_pic/bulbasaur.png")
+    checkbox1 = tk.Radiobutton(master=frame1, text="Bulbasaur", variable=starter_num, value=1)
+    tk.Label(frame1, image=img1).pack()
+    checkbox1.pack()
+    frame1.pack(side=tk.LEFT)
+
+    frame2 = tk.Frame()
+    img2 = tk.PhotoImage(file="poke_pic/charmander.png")
+    checkbox2 = tk.Radiobutton(master=frame2, text="Charmander", variable=starter_num, value=2)
+    tk.Label(frame2, image=img2).pack()
+    checkbox2.pack()
+    frame2.pack(side=tk.LEFT)
+
+    frame3 = tk.Frame()
+    img3 = tk.PhotoImage(file="poke_pic/squirtle.png")
+    checkbox3 = tk.Radiobutton(master=frame3, text="Squirtle", variable=starter_num, value=3)
+    tk.Label(frame3, image=img3).pack()
+    checkbox3.pack()
+    frame3.pack(side=tk.LEFT)
+
+    okay = tk.Button(frame2, text="Okay", command=close)
+    okay.pack(side=tk.BOTTOM)
+
+    window.mainloop()
+    return starter_num.get()

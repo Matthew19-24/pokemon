@@ -73,7 +73,7 @@ class Squirtle(Stats.Pokemon):
     def __init__(self, level, owner, wild):
         super().__init__(level)
         self.wild = wild
-        self.image = 'poke_pic/squirtle.gif'
+        self.image = 'poke_pic/squirtle.png'
         self.atk_stat_stage = 0
         self.def_stat_stage = 0
         self.set_iv()

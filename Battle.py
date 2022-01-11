@@ -23,7 +23,7 @@ def targets_attack_second(user, target):
 
 
 def battle(user, target):
-    print(f"{target.owner} wants to battle!")
+    print(f"\n{target.owner} wants to battle!")
     sleep(1.5)
     print(f"\n{target.owner} sent out {target.name}! (HP: {target.hp_stat})")
     sleep(1.5)
