@@ -100,3 +100,22 @@ class Squirtle(Stats.Pokemon):
     @staticmethod
     def effort(target):
         target.ev_def += 1
+
+
+# Create the party to hold Pokemon
+class party():
+    def __init__ (self, starter):
+        self.party = [starter]
+
+    # Create function to add Pokemon to party
+    def add_to_party(self, pokemon):
+        if len(self.party) < 6:
+            self.party.append(pokemon)
+        else:
+            print("Your party is full")
+            
+
+    # Create function to swap pokemon to front of party
+    def swap_to_main(self, pokemon):
+        self.party.insert(0, self.party.pop(pokemon))
+        self.party.insert(pokemon, self.party.pop(1))
